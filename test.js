@@ -16,6 +16,7 @@ describe('MyAPI', function() {
     xhr.restore();
   });
 
+  // Testing a GET request
   it('should parse fetched data as JSON', function(done) {
     var data = { foo: 'bar' };
     var dataJson = JSON.stringify(data);
@@ -27,4 +28,13 @@ describe('MyAPI', function() {
     requests[0].respond(200, {'Content-Type': 'text/json'}, dataJson);
   });
 
+  // Testing a POST request
+  it('should send given data as JSON body', function() {
+    var data = { hello: 'world'};
+    var dataJson = JSON.stringify(data);
+
+    myapi.post(data, function() {});
+
+    expect(requests[0].requestBody).to.equal(dataJson);
+  });
 });
