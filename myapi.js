@@ -3,7 +3,7 @@ var myapi = {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://jsonplaceholder.typicode.com/posts/1', true);
     xhr.onreadystatechange = function() {
-      if(xhr,readyState == 4) {
+      if(xhr.readyState == 4) {
         if(xhr.status == 200) {
           callback(null, JSON.parse(xhr.responseText));
         }
