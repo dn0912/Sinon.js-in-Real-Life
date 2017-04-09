@@ -15,5 +15,20 @@ describe('api', function() {
     request.restore();
   });
 
+  it('should convert get result to object', function(done) {
+    var expected = { hello: 'world' };
+    var response = new PassThrough();
+    response.write(JSON.stringify(expected));
+    response.end();
 
-})
+    var request = new PassThrough();
+
+    request.yields(response)
+           .returns(request);
+
+    api.get(function(err, result) {
+      assert.deepEqual(result, expected);
+      done();
+    });
+  });
+});

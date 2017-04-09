@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dn0912/sinon.js-in-real-life.git"
@@ -14,5 +13,10 @@
   "bugs": {
     "url": "https://github.com/dn0912/sinon.js-in-real-life/issues"
   },
-  "homepage": "https://github.com/dn0912/sinon.js-in-real-life#readme"
+  "homepage": "https://github.com/dn0912/sinon.js-in-real-life#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0"
+  }
 }
