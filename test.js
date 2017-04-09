@@ -17,7 +17,7 @@ describe('MyAPI', function() {
   });
 
   it('should parse fetched data as JSON', function(done) {
-    var data = { foo: 'bar'};
+    var data = { foo: 'bar' };
     var dataJson = JSON.stringify(data);
 
     myapi.get(function(err, result) {
